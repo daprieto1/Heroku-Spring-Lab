@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example;
+package edu.eci;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -23,6 +23,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -36,6 +38,7 @@ import java.util.Map;
 
 @Controller
 @SpringBootApplication
+@ComponentScan("edu.eci")
 public class Main {
 
   @Value("${spring.datasource.url}")
