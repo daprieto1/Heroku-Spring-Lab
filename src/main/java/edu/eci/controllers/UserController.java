@@ -24,7 +24,7 @@ public class UserController {
         try{
             return new ResponseEntity<>(userServices.list(), HttpStatus.OK);
         }catch(Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(e.getStackTrace(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
